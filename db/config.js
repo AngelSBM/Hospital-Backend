@@ -15,7 +15,7 @@ const dbConnection = async () => {
         console.log('DB online');
 
 
-   } catch (error) {
+   } catch ( error ) {
        
     console.log( error );
     throw new Error('Error a la hora de iniciar la base de datos, ver LOGS')
@@ -27,5 +27,5 @@ const dbConnection = async () => {
 
 
 module.exports = {
-    dbConnection
+    dbConnection : dbConnection
 }
