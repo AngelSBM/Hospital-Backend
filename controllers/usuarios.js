@@ -5,7 +5,7 @@ const { generarJWT } = require('../helpers/jwt');
 
 
 
- const getUsuarios = async (req, res) => {
+const getUsuarios = async (req, res) => {
    
     const usuarios = await Usuario.find({}, 'nombre email nombre role google');
 
@@ -50,7 +50,7 @@ const crearUsuario = async (req, res = response) => {
          res.json({
             ok: true,
             usuario: usuario,
-            jwt: token
+            token: token
         });
 
     } catch (error) {
